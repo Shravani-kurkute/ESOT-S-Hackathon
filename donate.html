@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Page</title>
+    <!-- Add necessary stylesheets and scripts -->
+</head>
+<style>
+    body{
+        background-image: url(donate1.jpg);
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    h1{
+        font-family: cursive;
+        font-size: 50px;
+        font-weight: bolder;
+        text-align: center;
+        border: 4px solid black;
+        padding: 10px;
+        
+    }
+    main{
+        border: 10px double black;
+        font-style: italic;
+        font-size: 30px;
+        font-weight: bolder;
+    
+        color:black ;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 10px;
+                
+    }
+    option{
+        color: coral;
+        font-family: cursive;
+     
+    }
+    
+    footer {
+        text-align: center;
+        padding: 10px;
+        
+
+    }
+    a {
+        text-align: center;
+        display: block;
+        margin-top: -14px;
+        font-size: 20px;
+        text-decoration: underline;
+        color: #f1f2ee;
+    }
+    
+</style>
+<body>
+    <header>
+        <h1>Donate Page</h1>
+    </header>
+    <main>
+        <!-- Add your donation process elements here -->
+        <form id="donateForm">
+            <label for="itemName">Item Name:</label>
+            <input type="text" id="itemName" name="itemName" required><br><br>
+            
+            <label for="itemDescription">Item Description:</label>
+            <textarea id="itemDescription" name="itemDescription" required></textarea><br><br>
+            
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required><br><br>
+            
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="clothing">Clothing</option>
+                <option value="electronics">Electronics</option>
+                <option value="books">Books</option>
+                <option value="furniture">Furniture</option>
+                <!-- Add more options as needed -->
+            </select><br><br>
+            
+            <label for="image">Upload Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" required><br><br>
+            
+            <button type="submit">Donate Now</button>
+        </form>
+    </main>
+    <footer>
+        <p>© 2024 Your Company</p>
+    </footer>
+    <a href="hakathon.html">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(back.avif);
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            color: white;
+            font-family: cursive;
+            font-size: larger;
+            margin: 0 auto;
+            background-color: #973547;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .total-amount {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .payment-success {
+            text-align: center;
+            color: green;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Checkout</h1>
+        <div class="total-amount" id="totalAmount">
+            Total Amount: $<span id="amount"></span>
+        </div>
+        
+        <form id="paymentForm" action="process_payment.php" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="upi">PhonePe UPI ID</label>
+            <input type="text" id="upi" name="upi" required>
+            
+            <!-- QR Code Container -->
+            <div class="qr-code-container">
+                <img id="qrCode" src="generate_qr.php" alt="QR Code">
+            </div>
+            
+            <input type="submit" value="Submit Payment">
+        </form>
+
+        <div class="payment-success" id="paymentSuccess" style="display: none;">
+            Payment is successful!
+        </div>
+    </div>
+    
+    <!-- JavaScript to retrieve and display total amount and handle form submission -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    // Retrieve total amount from localStorage and display it
+    var totalAmount = localStorage.getItem('totalPrice');
+    if (totalAmount) {
+        document.getElementById('Price').textContent = totalAmount;
+    } else {
+        // Handle case where totalAmount is not set (optional)
+        document.getElementById('Price').textContent = '0.00'; // or handle differently
+    }
+});
+
+document.getElementById('paymentForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    // Simulate payment processing (implement actual payment processing as needed)
+    setTimeout(function () {
+        document.getElementById('paymentSuccess').style.display = 'block';
+        // Optionally, clear the cart
+        localStorage.removeItem('cart');
+        localStorage.removeItem('totalAmount'); // Clear total amount after payment
+    }, 1000); // Simulate a delay for payment processing
+});
+
+    </script>
+</body>
+</html>
+
+
+
+
+

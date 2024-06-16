@@ -1,0 +1,266 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudySwap</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+    <!-- Add this code to the <head> section of your HTML file -->
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+
+
+
+</head>
+<body>
+    <!-- Add this code to the <header> section of your HTML file -->
+        <div class="container">
+            <header>
+                <div style="background-image: url(back2.jpg);
+                background-size: cover;
+                background-position: center;
+                height: 100px;
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                align-content: center;
+                flex-direction: row; ">
+                <img src="logo.jpg" alt="StudySwap Logo" style="width: 100px; height: 100px; margin: 20px;">
+                
+                    <h3 style="font-size: 59px;font-family: cursive; font-weight: bolder;">Welcome To StudySwap</h3>
+                </div>
+               
+                <nav>
+                    <ul>
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#services" class="nav-link" onclick="window.location.href='service.html'">Services</a></li>
+                        <li><a href="#about" class="nav-link" onclick="window.location.href='about us.html'">About</a></li>
+                        <li><a href="#contact" class="nav-link">Contact Us</a></li>
+                        <li><a href="#login" class="nav-link" onclick="window.location.href='log in.html'">Login</a></li>
+                        <li><a href="#cart" class="nav-link" onclick="window.location.href='cart.html'">Cart</a></li>
+                    </ul>
+                </nav>      
+               
+                
+            </header>
+    <!-- Navigation Bar -->
+    <!-- <nav>
+        <ul>
+            <li><a href="#home" style="color: #4CAF50;">Home</a></li>
+            <li><a href="#register" style="color: #8BC34A;">Register</a></li>
+            <li><a href="#login" style="color: #9C27B0;">Login</a></li>
+        </ul>
+    </nav> -->
+
+    <!-- Main Content -->
+    <main>
+        <div class="background-image">
+            <p>Exchange, Donate,<br> Or Sell Educational <br> Resources <br>With <br> Fellow Students.</p>
+            <div class="button-container">
+                <button class="custom-button" onclick="window.location.href='log in.html'">Login</button>
+                <button class="custom-button" onclick="window.location.href='register.html'">Register</button>
+            </div>
+        </div>
+
+        
+        
+   
+
+        <!-- Register Section -->
+        <!-- <section id="register">
+            <h1 style="color: #8BC34A;">Register</h1>
+            <form id="register-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"><br><br>
+                <label for="student-id">Student ID:</label>
+                <input type="text" id="student-id" name="student-id"><br><br>
+                <input type="submit" value="Register" style="background-color: #4CAF50; color: #fff;">
+            </form>
+        </section> -->
+
+        <!-- Login Section -->
+        <!-- <section id="login">
+            <h1 style="color: #9C27B0;">Login</h1>
+            <form id="login-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"><br><br>
+                <input type="submit" value="Login" style="background-color: #9C27B0; color: #fff;">
+            </form>
+        </section> -->
+
+        <!-- Item Listing Section
+        <section id="items">
+            <h1 style="color: #0b5ab5;">Items for Sale/Trade/Donate</h1>
+            <ul id="item-list">
+                Item list will be populated dynamically -->
+            <!-- </ul>
+        </section> -->
+
+        <!-- Search Bar
+        <section id="search">
+            <h1 style="color: #097025;">Search for Items</h1>
+            <form id="search-form">
+                <label for="search-term">Search Term:</label>
+                <input type="search" id="search-term" name="search-term"><br><br>
+                <input type="submit" value="Search">
+            </form>
+        </section> -->
+
+        <!-- Payment Gateway
+        <section id="payment">
+            <h1 style="color: #9fe11c;">Payment Gateway</h1>
+            <form id="payment-form">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount"><br><br>
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method" name="payment-method">
+                    <option value="paypal">PayPal</option>
+                    <option value="stripe">Stripe</option>
+                </select><br><br>
+                <input type="submit" value="Pay">
+            </form>-->
+
+        
+
+        <div class="card-container">
+            <!--First row of cards -->
+            <div class="card-item">
+                <a href="buy.html" style="text-decoration: none;" >
+                    <div class="cards">
+                        <div class="card">
+                            <article>
+                                <h2>Buy</h2>
+                                <div class="pic">
+                                    <img src="buy1.jpg">
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="card-item">
+                <a href="sell.html" style="text-decoration: none;">
+                    <div class="cards">
+                        <div class="card">
+                            <article>
+                                <h2>Sell</h2>
+                                <div class="pic">
+                                    <img src="sell3.jpg">
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Second row -->        
+           
+        
+             <div class="card-item">
+                <a href="donate.html" style="text-decoration: none;">
+                    <div class="cards">
+                        <div class="card">
+                            <article>
+                                <h2>Donate</h2>
+                                <div class="pic">
+                                    <img src="donateicon.jpg">
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="card-item">
+                <a href="exchange.html" style="text-decoration: none;">
+                    <div class="cards">
+                        <div class="card">
+                            <article>
+                                <h2>Exchange</h2>
+                                <div class="pic">
+                                    <img src="exhangeicon.jpg">
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </a>
+            </div>       
+        
+        
+        <!-- contact Section -->
+        <div class="contact-section" id="contact">
+            <h2>Connect With Us</h2>
+            <form>
+                <label for="name">Name*</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="purpose">Sponsorship/Partnership/Collaboration</label>
+                <input type="text" id="purpose" name="purpose">
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+            
+            <div class="contact-details">
+                <p >Entrepreneurship Development Cell,<br> VIIT, Kondhwa BK., Pune,<br> Maharashtra-411048</p>
+                <p>Phone: +91 7385 763 303 | +91 8830 898 505</p>
+                <p>Email: <a href="mailto:yash.22310284@viit.ac.in" style="color: #efff88;">yash.22310284@viit.ac.in</a></p>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const form = document.querySelector("form");
+                const nameField = document.getElementById("name");
+                const emailField = document.getElementById("email");
+                const messageField = document.getElementById("message");
+    
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault(); // Prevent the default form submission
+    
+                    if (nameField.value.trim() === "") {
+                        alert("Please enter your name.");
+                        nameField.focus();
+                        return;
+                    }
+    
+                    if (emailField.value.trim() === "") {
+                        alert("Please enter your email.");
+                        emailField.focus();
+                        return;
+                    }
+    
+                    if (messageField.value.trim() === "") {
+                        alert("Please enter your message.");
+                        messageField.focus();
+                        return;
+                    }
+    
+                    alert("Your message has been sent successfully!");
+                    form.reset();
+                });
+            });
+        </script>
+    
+        <a href="hakathon.html" style="position: center; color: white;">Back to Home</a>
+    </main>
+    
+
+<!-- JavaScript Files -->
+<script src="script2.js"></script>
+</body>
+</html>

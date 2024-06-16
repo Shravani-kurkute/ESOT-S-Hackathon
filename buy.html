@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    background-color: rgb(251, 229, 245);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    font-family: cursive;
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    border: 4px solid black;
+    padding: 10px;
+    margin: 20px;
+    background-color:rgb(251, 229, 245) ;
+}
+.container {
+    display: flex;
+    flex: 1;
+}
+.sidebar {
+    width: 25%;
+    padding: 20px;
+    border-right: 5px double black;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.sidebar select, .sidebar option {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-family: cursive;
+    color: coral;
+}
+.content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.product {
+    font-size: 20px;
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+.product img {
+    
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+p {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+a {
+    text-align: center;
+    display: block;
+    margin-top: -14px;
+    font-size: 20px;
+    text-decoration: underline;
+    color: #631a38;
+}
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #631a38;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+transform: scale(1.05); /* Increase the size of the card on hover */
+color: #f1f66a;
+box-shadow: 0 0 10px #e10725;/* Add a subtle shadow effect */
+
+}
+button.clicked{
+    background-color: aqua
+    color( rgb(89, 235, 123) )
+}
+</style>
+<body>
+    <header>
+        <h1>Buy Page</h1>
+        <a href="cart.html" id="cartlink">Go To Cart</a>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <form id="filterForm">
+                <label for="category">Category:</label>
+                <select id="category" name="category">
+                    <option value="all">All</option>
+                    <option value="Books">Books</option>
+                    <option value="Calculator">Calculator</option>
+                    <option value="Guide">Guide</option>
+                    <option value="Lab Equipment">lab Equipment</option>
+                    <option value="Stationary">Stationary</option>
+                    
+                </select><br>
+                <label for="price">Price Range:</label>
+                <select id="price" name="price">
+                    <option value="all">All</option>
+                    <option value="0-50">$0 - $50</option>
+                    <option value="50-100">$50 - $100</option>
+                    <option value="100-200">$100 - $200</option>
+                    <option value="200-300">$200 - $300</option>
+                    <option value="300-400">$300 - $400</option>
+                    <option value="400-500">$400 - $500</option>
+                    <option value="500-600">$500 - $600</option>
+                    <option value="600-700">$600 - $700</option>
+                    <option value="800-900">$800 - $900</option>
+                    <option value="900-1000">$900 - $1000</option>
+                    <option value="1000-2000">$1000-2000</option>
+                    <option value="2000-3000">$2000 - $3000</option>
+                </select><br>
+                <button type="button" onclick="applyFilters()">Apply Filters</button>
+            </form>
+        </div>
+        <div class="content" id="productContainer">
+
+            <!-- textbooks -->
+            <div class="product" data-category="Books" data-price="300">
+                <img src="book1.jpg" alt="book1">
+                <p>Category: Books<br>Name: Book 1<br>Description: Example description<br>Price: $300</p>
+                <button onclick="addToCart('Books', 'Book 1', 300, 'book1.jpg')">Add to Cart</button>
+            </div>
+
+
+            <div class="product" data-category="Books" data-price="350">
+                <img src="book2.jpg" alt="book2">
+                <p>Category: Books<br>Name: Book 2<br>Description: Example description<br>Price: $350</p>
+                <button onclick="addToCart('Books','Book2', 350,'book2.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Books" data-price="250">
+                <img src="book3.jpg" alt="book3">
+                <p>Category: Books<br>Name: Book 3<br>Description: Example description<br>Price: $250</p>
+                <button onclick="addToCart('Books','Book3', 250,'book3.jpg')">Add to Cart</button>
+            </div>
+            
+            <div class="product" data-category="Books" data-price="400">
+                <img src="book4.jpg" alt="book4">
+                <p>Category: Books<br>Name: Book 4<br>Description: Example description<br>Price: $400</p>
+                <button onclick="addToCart('Books','Book4', 400,'book4.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Books" data-price="430">
+                <img src="book5.jpg" alt="book5">
+                <p>Category: Books<br>Name: Book 5<br>Description: Example description<br>Price: $430</p>
+                <button onclick="addToCart('Books','Book5', 430,'book5.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Books" data-price="500">
+                <img src="book6.jpg" alt="book6">
+                <p>Category: Books<br>Name: Book 6<br>Description: Example description<br>Price: $500</p>
+                <button onclick="addToCart('Books','Book6', 500,'book6.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Books" data-price="300">
+                <img src="book7.jpg" alt="book7">
+                <p>Category: Books<br>Name: Book 7<br>Description: Example description<br>Price: $300</p>
+                <button onclick="addToCart('Books','Book7', 300,'book7.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Books" data-price="500">
+                <img src="book8.jpg" alt="book8">
+                <p>Category: Books<br>Name: Book 8<br>Description: Example description<br>Price: $500</p>
+                <button onclick="addToCart('Books','Book8', 500,'book8.jpg')">Add to Cart</button>
+            </div>
+
+            <!-- calculator -->
+            <div class="product" data-category="Calculator" data-price="300">
+                <img src="calculator1.jpg" alt="calculator1">
+                <p>Category: Calculator<br>Name: Calculator1<br>Description: Example description<br>Price: $300</p>
+                <button onclick="addToCart('Calculator','calculator1' ,300,'calculator1.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Calculator" data-price="350">
+                <img src="calculator2.jpg" alt="calculator2">
+                <p>Category: Calculator<br>Name: Calculator2<br>Description: Example description<br>Price: $350</p>
+                <button onclick="addToCart('Calculator','calculator2', 350,'calculator2.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Calculator" data-price="900">
+                <img src="calculator3.jpg" alt="calculator3">
+                <p>Category: Calculator<br>Name: Calculator3<br>Description: Example description<br>Price: $900</p>
+                <button onclick="addToCart('Calculator','calculator3' ,900,'calculator3.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Calculator" data-price="850">
+                <img src="calculator4.jpg" alt="calculator4">
+                <p>Category: Calculator<br>Name: Calculator4<br>Description: Example description<br>Price: $850</p>
+                <button onclick="addToCart('Calculator','calculator4' ,850,'calculator4.jpg')">Add to Cart</button>
+            </div>
+
+            <!-- guide -->
+            
+            <div class="product" data-category="Guide" data-price="350">
+                <img src="guide1.jpg" alt="guide1">
+                <p>Category: Guide<br>Name: Guide 1<br>Description: Example description<br>Price: $350</p>
+                <button onclick="addToCart('Guide','Guide1', 350,'guide1.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Guide" data-price="250">
+                <img src="guide2.jpg" alt="guide2">
+                <p>Category: Guide<br>Name: Guide 2<br>Description: Example description<br>Price: $250</p>
+                <button onclick="addToCart('Guide','Guide2', 250,'guide2.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Guide" data-price="350">
+                <img src="guide3.jpg" alt="guide3">
+                <p>Category: Guide<br>Name: Guide 3<br>Description: Example description<br>Price: $350</p>
+                <button onclick="addToCart('Guide','Guide3', 350,'guide3.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Guide" data-price="250">
+                <img src="guide4.jpg" alt="guide4">
+                <p>Category: Guide<br>Name: Guide 4<br>Description: Example description<br>Price: $250</p>
+                <button onclick="addToCart('Guide','Guide4', 250,'guide4.jpg')">Add to Cart</button>
+            </div>
+
+            <!-- lab equipment -->
+            <div class="product" data-category="Lab Equipment" data-price="950">
+                <img src="lab1.jpg" alt="lab 1">
+                <p>Category: Lab Equipment<br>Name: Lab 1<br>Description: Example description<br>Price: $950</p>
+                <button onclick="addToCart('Lab Equipment','Lab1', 950,'lab1.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Lab Equipment" data-price="190">
+                <img src="lab2.webp" alt="lab 2">
+                <p>Category: Lab Equipment<br>Name: Lab 2<br>Description: Example description<br>Price: $190</p>
+                <button onclick="addToCart('Lab Equipment','Lab2', 190,'lab2.webp')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Lab Equipment" data-price="350">
+                <img src="lab3.webp" alt="lab 3">
+                <p>Category: Lab Equipment<br>Name: Lab 3<br>Description: Example description<br>Price: $350</p>
+                <button onclick="addToCart('Lab Equipment','Lab3', 350,'lab3.webp')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Lab Equipment" data-price="2500">
+                <img src="lab4.webp" alt="lab 4">
+                <p>Category: Lab Equipment<br>Name: Lab 4<br>Description: Example description<br>Price: $2500</p>
+                <button onclick="addToCart('Lab Equipment','Lab4', 2500,'lab4.webp')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Lab Equipment" data-price="450">
+                <img src="lab5.webp" alt="lab 5">
+                <p>Category: Lab Equipment<br>Name: Lab 5<br>Description: Example description<br>Price: $450</p>
+                <button onclick="addToCart('Lab Equipment','Lab5', 450,'lab5.webp')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Lab Equipment" data-price="750">
+                <img src="lab6.webp" alt="lab 6">
+                <p>Category: Lab Equipment<br>Name: Lab 6<br>Description: Example description<br>Price: $750</p>
+                <button onclick="addToCart('Lab Equipment','Lab6', 750,'lab6.webp')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Lab Equipment" data-price="300">
+                <img src="lab7.webp" alt="lab 7">
+                <p>Category: Lab Equipment<br>Name: Lab 7<br>Description: Example description<br>Price: $300</p>
+                <button onclick="addToCart('Lab Equipment','Lab7', 300,'lab7.webp')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Lab Equipment" data-price="400">
+                <img src="lab8.webp" alt="lab 8">
+                <p>Category: Lab Equipment<br>Name: Lab 8<br>Description: Example description<br>Price: $400</p>
+                <button onclick="addToCart('Lab Equipment','lab8', 400,'lab8.webp')">Add to Cart</button>
+            </div>
+
+            
+
+            <!-- stationary -->
+            
+
+            <div class="product" data-category="Stationary" data-price="100">
+                <img src="Stationary1.jpg" alt="statyonary 1">
+                <p>Category: Stationary<br>Name: Stationary1<br>Description: Example description<br>Price: $100</p>
+                <button onclick="addToCart('Stationary', 'Stationary1',100,'Stationary1.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Stationary" data-price="80">
+                <img src="Stationary2.webp" alt="Stationary 2">
+                <p>Category: Stationary<br>Name: Stationary 2<br>Description: Example description<br>Price: $80</p>
+                <button onclick="addToCart('Stationary', 'Stationary 2',80,'Stationary2.webp')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Stationary" data-price="99">
+                <img src="stationary3.jpg" alt="Stationary 3">
+                <p>Category: Stationary<br>Name: Stationary 3<br>Description: Example description<br>Price: $99</p>
+                <button onclick="addToCart('Stationary', 'Stationary 3',99,'stationary3.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Stationary" data-price="400">
+                <img src="stationary4.jpg" alt="Stationary 4">
+                <p>Category: Stationary<br>Name: Stationary 4<br>Description: Example description<br>Price: $400</p>
+                <button onclick="addToCart('Stationary', 'Stationary 4',400,'stationary4.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Stationary" data-price="100">
+                <img src="stationary5.jpg" alt="Stationary 5">
+                <p>Category: Stationary<br>Name: Stationary 5<br>Description: Example description<br>Price: $100</p>
+                <button onclick="addToCart('Stationary', 'Stationary 5',100,'stationary5.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Stationary" data-price="200">
+                <img src="stationary6.jpg" alt="Stationary 6">
+                <p>Category: Stationary<br>Name: Stationary 6<br>Description: Example description<br>Price: $200</p>
+                <button onclick="addToCart('Stationary', 'Stationary 6',200,'stationary5.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Stationary" data-price="250">
+                <img src="stationary7.jpg" alt="Stationary 7">
+                <p>Category: Stationary<br>Name: Stationary 7<br>Description: Example description<br>Price: $250</p>
+                <button onclick="addToCart('Stationary', 'Stationary 7',250,'stationary7.jpg')">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="Stationary" data-price="99">
+                <img src="stationary9.jpg" alt="Stationary 9">
+                <p>Category: Stationary<br>Name: Stationary 9<br>Description: Example description<br>Price: $99</p>
+                <button onclick="addToCart('Stationary', 'Stationary 9', 99, 'stationary9.jpg')">Add to Cart</button>
+            </div>
+            
+
+            <div class="product" data-category="Stationary" data-price="99">
+                <img src="stationary10.jpg" alt="Product 3">
+                <p>Category-Stationary<br>Name: stationary10<br>Description - <br> price- $99</p>
+                <button onclick="addToCart('Stationary', 99,'images/product3.jpg')">Add to Cart</button>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 Your Company</p>
+    </footer>
+    <a href="hakathon.html">Back to Home</a>
+    <script src="buy.js"></script>
+    
+    
+</body>
+</html>
+
+
+

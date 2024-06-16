@@ -1,0 +1,281 @@
+/* styles.css */
+main{
+    width: 1428px;
+    background-image: url(back.avif);
+    margin: 5px;
+    padding: 5px;
+}
+main.info-section{
+    width: 100px;
+}
+header{
+background-color: white;    
+}
+img:hover {
+transform: scale(1.05);/* Increase the size of the card on hover */
+color: #5716e4;
+box-shadow: 0 0 10px #e10725;/* Add a subtle shadow effect*/
+} 
+h3:hover {
+transform: scale(1.05); /* Increase the size of the card on hover */
+color: #5716e4;
+box-shadow: 0 0 10px #e10725;/* Add a subtle shadow effect */
+}
+.button-container {
+margin-top: 20px; /* Add some space between the paragraph and the buttons */
+}
+
+.custom-button {
+padding: 10px 20px; /* Add padding to the buttons */
+margin: 5px; /* Add space between the buttons */
+font-size: 1em; /* Set the font size */
+color: rgb(242, 242, 27); /* Set the text color */
+background-color: #631a38; /* Set the background color */
+border: none; /* Remove the default border */
+border-radius: 5px; /* Add rounded corners */
+cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.custom-button:hover {
+transform: scale(1.05);
+color: #631a38;
+background-color:rgb(242, 242, 27); /* Darken the background color on hover */
+text-shadow: 0 0 10px rgb(226, 83, 21);
+
+}
+
+body {
+font-family: 'Baloo Bhai', cursive;
+color: rgb(146, 2, 2);
+margin: 100;
+padding: 100;
+border: 5px double violet;
+border-radius: 10px;
+
+}
+p{
+width: 100%;
+font-size: 40px;
+font-weight: bolder;
+font-family: cursive;
+color: black;
+
+text-align: left;
+}
+nav ul {
+list-style-type: none;
+padding: 0;
+display: flex;
+justify-content: end;
+margin-top: 7px;
+margin-bottom: -2px;
+/* border: 2px dashed orange;
+border-radius: 5px; */
+}
+
+nav ul li {
+display: inline-block; /* Arrange items in a horizontal line */
+margin-right: 10px; /* Add some space between items */
+}
+
+.nav-link {
+color: black;
+font-weight: bold;
+font-style: italic;
+font-size: medium;
+background-color: #ddd;
+padding: 4px;
+border: 2px solid black;
+border-radius: 5px;
+width: fit-content;
+display: flex;
+justify-content: right;
+text-decoration: none; /* Remove underline from links */
+transition: background-color 0.3s, color 0.3s; /* Add transition for smooth hover effect */
+}
+
+.nav-link:hover {
+background-color: #24bc4d; /* Change background color on hover */
+color: rgb(221, 233, 85); /* Change text color on hover */
+cursor: pointer; /* Change cursor to pointer on hover */
+}
+.card-container {
+display: flex;
+flex-wrap: wrap; /* Allow items to wrap to the next line */
+justify-content: space-between; /* Distribute space between items */
+max-width: 800px; /* Optional: set a max width for the container */
+margin: 0 auto; /* Center the container */
+}
+
+.card-item {
+flex: 1 1 45%; /* Adjust width to allow two items per row */
+margin: 10px; /* Add space between items */
+box-sizing: border-box;
+}
+.card-item:hover {
+transform: scale(1.05); /* Increase the size of the card on hover */
+box-shadow: 0 0 10px #efff88; /* Add a subtle shadow effect */
+}
+
+.card {
+border: 3px solid #02000000;
+border-color: black;
+border-radius: 8px;
+overflow: hidden;
+text-align: start;
+padding: 0px;
+margin: 4px;
+}
+
+.card img {
+width: 220px; /* Ensure the image fits within the card */
+height: 230px;
+}
+
+.card h2 {
+font-size: 1.5em;
+margin: 0.5em 0;
+color: white;
+}
+.card h2:hover {
+transform: scale(1.05);
+color: #efff88; /* Change the color of the text to white on hover */
+text-shadow: 0 0 10px rgb(226, 83, 21); /* Add a subtle shadow effect to the text */
+}
+
+.card article {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100%;
+}
+.background-image {
+background-image: url('tree.webp'); /* Replace with your image URL */
+background-size: contain; /* Cover the entire container */
+background-repeat: no-repeat;
+background-position: right; /* Center the image */    
+padding: 16px; /* Add some padding to the container */
+text-align: center; /* Center the text */
+color: white; /* Text color, adjust as needed for contrast */
+font-size: 1.2em; /* Font size, adjust as needed */
+border-radius: 8px; /* Optional: rounded corners */
+height: 476px;
+width: 1350px;
+border: 5px solid black;
+border-radius: 10px;
+margin-left: 35px;
+margin-right: 10px;
+margin-top: 10px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.background-image p {
+color: #efff88;
+/* text-decoration: underline; */
+text-decoration-color: rgb(0, 0, 0);
+margin: 0; /* Remove default paragraph margin */
+padding: 10px; /* Add some padding to the paragraph */
+display: inline-block; /* Shrink-wrap the paragraph */
+border-radius: 4px; /* Optional: rounded corners for the paragraph background */
+}
+
+.contact-section {
+margin: 30px;
+width: 100%;
+padding: 20px;
+border: 5px solid black;
+border-radius: 10px;
+background-color: #f9f9f9;
+background-image: url(contact.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+box-sizing: content-box;
+}
+.contact-section h2 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #efff88;
+}
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+}
+.contact-section label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center;
+    color:#efff88;
+}
+
+.contact-section input, .contact-section textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    color: #631a38;
+    font-family: cursive;
+    font-size: medium;
+    font-weight: bold;
+}
+.contact-section button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #631a38;
+    color: white;
+    cursor: pointer;
+}
+.contact-section button:hover {
+    transform: scaleX(1.05);
+    color: red;
+    background-color: #efff88;
+}
+.contact-details {
+    text-align: center;
+    margin-top: 20px;
+}
+.contact-details p {
+    color:#efff88 ;
+    font-family: cursive;
+    font-weight: bolder;
+    font-size: 25px;
+    margin: 5px 0;
+}
+
+.info-section {
+padding: 20px;
+border: 5px solid black;
+border-radius: 10px;
+margin: 20px 0;
+max-width: 100%;
+margin-left: 45px;
+margin-right: 20px;
+position: relative
+
+}
+
+
+.info-section h2 {
+margin-top: 20px;
+color: #333;
+}
+
+.info-section p, .info-section ul, .info-section ol {
+color: #666;
+margin-bottom: 15px;
+}
+
+.info-section ul, .info-section ol {
+padding-left: 20px;
+}
+
+.info-section li {
+margin-bottom: 10px;
+}
