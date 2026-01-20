@@ -38,4 +38,21 @@ This project was built as part of a **Hackathon submission**, focusing on real-w
 
 ---
 
+### Backend
+- Node.js
+- Express.js
+- PHP (for form & payment handling)
 
+### Database
+- (Can be extended with MySQL / MongoDB)
+
+---
+
+
+
+
+> *“The greatest threat to our planet is the belief that someone else will save it.”*
+
+Let’s reduce e-waste — **one device at a time** ♻️  
+
+⭐ If you like this project, don’t forget to **star the repository**!
